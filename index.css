@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+html {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+}
+
+:root {
+    --color-red:          #b91c1c;
+    --color-red-dark:     #991b1b;
+    --color-red-hover:    #7f1d1d;
+
+    --color-bg-warm:      #f9f6f1;
+    --color-bg-white:     #ffffff;
+
+    --color-text-dark:    #1a1a1a;
+    --color-text-muted:   #ffffff88;
+    --color-text-light:   #a8a29e;
+
+    --color-border:       #e5e0d8;
+    --color-border-light: #f0ece4;
+
+}
+
+header {
+    background-color: var(--color-red);
+    height: 5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vh 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 5rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.logo img{
+    height: 4rem;
+    padding-left: 1rem;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 1rem;
+}
+
+.nav-right input{
+    background-color: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 1rem;
+}
+
+.nav-right input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.nav-right svg{
+    fill: white;
+    width: 2.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    min-height: 100vh;
+    padding: 2rem 5%;
+}
+
+.hero-content {
+    display:flex;
+    flex-direction: column;
+}
+
+.hero-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: var(--color-red);
+}
+
+.hero-label::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: #b91c1c;
+    display: inline-block;
+}
+
+.hero-img {
+    position: relative;
+}
+
+.hero-img img{
+    width: 25vw;
+    border-radius: 50%;
+    border: 2px solid #991b1b7c;
+    padding: 0.5rem;
+}
+
+.hero-img::before {
+    content: "";
+    position: absolute;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 50%;
+    background:#e4c8c4;
+    z-index: -1;
+    left: 0.5rem;
+}
