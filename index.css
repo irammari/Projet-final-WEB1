@@ -29,6 +29,8 @@ body {
     --color-border-light: #f0ece4;
 }
 
+/* NAVBAR */
+
 header {
     background-color: var(--color-red);
     height: 10vh;
@@ -106,6 +108,8 @@ nav a:hover::after {
     padding-right: 0.6rem;
 }
 
+/* HERO SECTION */
+
 .hero{
     display: flex;
     align-items: center;
@@ -133,7 +137,7 @@ nav a:hover::after {
 .hero-label::before {
     content: "";
     width: 2.5vw;
-    height: 1.5px;
+    height: 2px;
     background-color: #b91c1c;
     display: inline-block;
 }
@@ -168,7 +172,7 @@ nav a:hover::after {
     gap: 1.5rem;
 }
 
-.buttons button{
+.buttons *{
     padding: 1.2rem 2rem;  
     font-weight: 700;
     cursor: pointer;
@@ -191,6 +195,7 @@ nav a:hover::after {
     background-color: var(--color-bg-white);
     border: 0.5px solid var(--color-border);
     color: var(--color-text-dark);
+    text-decoration: none;
 }
 
 .aboutme-btn:hover {
@@ -247,4 +252,79 @@ nav a:hover::after {
     background:#e4c8c4;
     z-index: -1;
     left: 0.5rem;
+}
+
+/* ABOUT ME */
+
+#about-me {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20vw;
+    padding: 5rem;
+    background-color: var(--color-bg-white);
+    height: 50vh;
+}
+
+.about-me-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.whoami::before {
+    content: "";
+    display: inline-block;
+    width: 2.5vw;
+    height: 2px;
+    background-color: var(--color-red);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.whoami {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+}
+
+.about-me-title {
+    font-size: 3rem;
+    font-family: 'playfair display', serif;
+    font-weight: 600;  
+    gap: 0.5rem;
+
+}
+
+.about-me-title span {
+    display: block;
+    font-style: italic;
+}
+
+.about-me-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 50%;
+    color: var(--color-text-muted);
+}
+
+.about-me-text hr {
+    border: 1px solid var(--color-border);
+}
+
+.about-me-xp {
+    display: flex;
+    gap: 2rem;
+}
+
+.xp-num {
+    font-size: 2rem;
+    color: var(--color-red-dark);
+    font-family: 'playfair display', serif;
+    font-weight: 600;
+}
+
+.xp-text {
+    color: var(--color-text-muted);
+    text-transform: uppercase;
 }
