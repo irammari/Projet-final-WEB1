@@ -34,6 +34,10 @@ body {
 header {
     background-color: var(--color-red);
     height: 10vh;
+    width: 100%;
+    top: 0;
+    position: sticky;
+    z-index: 100;
 }
 
 nav {
@@ -51,15 +55,14 @@ nav ul {
     gap: 5rem;
 }
 
-nav a{
+nav ul a{
     text-decoration: none;
     color: white;
     font-weight: 500;
     position: relative;
-    padding: 0.2rem 0;  
 }
 
-nav a::after {
+nav ul a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -73,7 +76,7 @@ nav a::after {
 }
 
 
-nav a:hover::after {
+nav ul a:hover::after {
     transform: scaleX(1);
 }
 .logo img{
@@ -86,7 +89,7 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding-right: 1rem;
+    padding-right: 3rem;
 }
 
 .nav-right input{
@@ -103,9 +106,61 @@ nav a:hover::after {
 
 .nav-right svg{
     fill: white;
-    width: 3rem;
-    padding-bottom: 0.5rem;
-    padding-right: 0.6rem;
+    width: 2.5rem;
+}
+
+#cart-toggle {
+    display: none;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart-panel {
+    position: absolute;
+    right: 0;
+    width: 20vw;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    display: none;
+    height: 20vh;
+    max-height: 450px;
+    overflow-y: auto;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.13);
+}
+
+#cart-toggle:checked ~ .cart-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.cart-panel-close {
+    cursor: pointer;
+}
+
+/* .cart-panel-header p {
+
+} */
+
+.cart-panel-close {
+    color: var(--color-text-light);
+}
+
+.cart-empty {
+    color: var(--color-text-light);
+    margin: 7%;
+    text-align: center;
+    font-style: italic;
 }
 
 /* HERO SECTION */
@@ -260,7 +315,7 @@ nav a:hover::after {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    gap: 20vw;
+    gap: 25vw;
     padding: 5rem;
     background-color: var(--color-bg-white);
     height: 50vh;
