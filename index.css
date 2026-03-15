@@ -7,6 +7,7 @@
 html {
     font-family: 'DM Sans', sans-serif;
     scroll-behavior: smooth;
+    overflow-y: scroll;
 }
 
 body {
@@ -113,6 +114,8 @@ nav ul a:hover::after {
     display: none;
 }
 
+/* CART */
+
 .cart {
     position: relative;
 }
@@ -129,11 +132,23 @@ nav ul a:hover::after {
     max-height: 450px;
     overflow-y: auto;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.13);
+    z-index: 10;
 }
 
 #cart-toggle:checked ~ .cart-panel {
     display: flex;
     flex-direction: column;
+}
+
+.cart-overlay {
+    display: none;
+    z-index: 5;
+}
+
+#cart-toggle:checked ~ .cart-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
 }
 
 .cart-panel-header {
@@ -147,10 +162,6 @@ nav ul a:hover::after {
 .cart-panel-close {
     cursor: pointer;
 }
-
-/* .cart-panel-header p {
-
-} */
 
 .cart-panel-close {
     color: var(--color-text-light);
@@ -180,7 +191,7 @@ nav ul a:hover::after {
     gap: 2rem;
 }
 
-.hero-label {
+.hero-header-small {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -189,25 +200,25 @@ nav ul a:hover::after {
     color: var(--color-red);
 }
 
-.hero-label::before {
+.hero-header-small::before {
     content: "";
     width: 2.5vw;
     height: 2px;
-    background-color: #b91c1c;
+    background-color: var(--color-red);
     display: inline-block;
 }
 
 .hero-content h1{
-    font-size: 4rem;
+    font-size: 5rem;
     font-family: 'playfair display', serif;
     font-weight: 600;
 }
 
-.hero-fname {
+.hero-header-fname {
     color: var(--color-text-dark);
 }
 
-.hero-lname {
+.hero-header-lname {
     font-style: italic;
     color: var(--color-red);
 }
@@ -225,15 +236,17 @@ nav ul a:hover::after {
 .buttons {
     display: flex;
     gap: 1.5rem;
+
+
 }
 
 .buttons *{
     padding: 1.2rem 2rem;  
     font-weight: 700;
-    cursor: pointer;
+    cursor: pointer;    
     border-radius: 8px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.13);
-
+    text-decoration: none;
 }
 
 .book-btn {
@@ -250,7 +263,6 @@ nav ul a:hover::after {
     background-color: var(--color-bg-white);
     border: 0.5px solid var(--color-border);
     color: var(--color-text-dark);
-    text-decoration: none;
 }
 
 .aboutme-btn:hover {
@@ -332,7 +344,7 @@ nav ul a:hover::after {
     display: inline-block;
     width: 2.5vw;
     height: 2px;
-    background-color: var(--color-red);
+    background-color: var(--color-red-dark);
     margin-right: 0.5rem;
     vertical-align: middle;
 }
