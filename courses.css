@@ -27,7 +27,11 @@
 }
 
 .courses-header-small{
+<<<<<<< HEAD
     font-size: 0.8rem;
+=======
+    font-size: 0.7rem;
+>>>>>>> 6e14405e3928c1ef40a2b28f072f82ef268ec7f0
     letter-spacing: 1px;
     color: var(--color-text-light);
 }
@@ -44,13 +48,18 @@
 }
 
 .courses-header-text {
+<<<<<<< HEAD
     color: var(--color-text-light);
+=======
+    color: var(--color-text-muted);
+>>>>>>> 6e14405e3928c1ef40a2b28f072f82ef268ec7f0
     text-align: center;
     max-width: 500px;
 }
 
 .courses-page {
     background-color: var(--color-bg-white);
+<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -244,4 +253,13 @@
 
 .course-title {
     margin-top: 0.5rem;
+=======
+}
+
+.courses-filters {
+    background-color: var(--color-bg-warm);
+    height: 20vh;
+    margin: 2rem 5rem;
+    border-radius: 10px;
+>>>>>>> 6e14405e3928c1ef40a2b28f072f82ef268ec7f0
 }

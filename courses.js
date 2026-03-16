@@ -7,6 +7,9 @@ const clearFiltersBtn = document.getElementById("clearFiltersBtn");
 function setPrice() {
     priceMin.textContent = Number(priceMinSlider.value).toLocaleString("en-US");
     priceMax.textContent = Number(priceMaxSlider.value).toLocaleString("en-US");
+
+    priceMinSlider.max = priceMaxSlider.value; 
+    priceMaxSlider.min = priceMinSlider.value; 
 }
 
 priceMinSlider.addEventListener("input", setPrice);
@@ -120,10 +123,15 @@ function filter() {
 clearFiltersBtn.addEventListener('click', (event) => {
     event.preventDefault();
     langIcons.forEach(icon => icon.classList.add('active'));
+
     techFilter.value = "all";
+
     levelFilter.value = "all";
-    priceMinFilter.value = "0"
-    priceMaxFilter.value = max;
+
+    priceMinFilter = priceMinSlider.min
+    priceMaxFilter = priceMaxSlider.max;
+    setPrice();
+
     searchFilter.value = null;
     showCourses(data.courses);
 })
