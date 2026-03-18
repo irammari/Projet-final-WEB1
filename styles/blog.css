@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+
+    --color-red: #b91c1c;
+    --color-red-dark: #991b1b;
+    --color-red-hover: #7f1d1d;
+
+    --color-bg-warm: #f9f6f1;
+    --color-bg-white: #ffffff;
+
+    --color-text-dark: #1a1a1a;
+    --color-text-muted: #78716c;
+    --color-text-light: #a8a29e;
+
+    --color-border: #e5e0d8;
+    --color-border-light: #f0ece4;
+
+    background-color: var(--color-bg-white);
+    font-family: "DM Sans", sans-serif;
+
+}
+
+header {
+    background-color: var(--color-red-dark);
+    width: 100%;
+    padding: 1vh 1.5vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    width: 10vw;
+}
+
+.navbar .logo img {
+    width: 100%;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-links ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    padding: 0.5vh 1vw;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.cart input {
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    padding: 1vh 1.5vw;
+}
+
+.cart i {
+    color: white;
+    font-size: 2.5ch;
+}
+
+main {
+    margin-top: 8vh;
+}
+
+.title {
+    background-color: var(--color-bg-warm);
+    padding-block: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.title .row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 11px;
+    color: var(--color-text-light);
+}
+
+.red-line {
+    width: 2vw;
+    height: 0.2vh;
+    background-color: var(--color-red);
+    border: none;
+}
+
+.title h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 4ch;
+}
+
+#red-word {
+    color: var(--color-red);
+    font-style: italic;
+}
+
+.title p {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.main-blog {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    padding: 4vh 5vw;
+}
+
+.main-blog p {
+    font-size: 11px;
+}
+
+.left-col {
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.5vh;
+}
+
+.left-col article {
+    width: 100%;
+    display: flex;
+    gap: 1vw;
+    padding: 1.5vh 1vw;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.left-col .image {
+    width: 15%;
+    aspect-ratio: 1/1.05;
+    border-radius: 8px;
+    background: url(https://picsum.photos/400);
+    background-size: cover;
+}
+
+.left-col .text-container {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.left-col h3 {
+    color: var(--color-red);
+    font-weight: 400;
+}
+
+.left-col .date {
+    color: var(--color-text-dark);
+}
+
+.description {
+    color: var(--color-text-muted);
+}
+
+.left-col .tags {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5vw;
+}
+
+.left-col .tags p {
+    background-color: #68cdf6;
+    color: white;
+    padding-inline: 1ch;
+    border-radius: 10px;
+}
+
+.right-col {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
+.right-col .heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 11px;
+    color: var(--color-text-light);
+    margin-bottom: 5px;
+}
+
+.right-col .archives, .newsletter, .youtube {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1.5vh;
+    padding: 1.5vh 1vw;
+    background-color: var(--color-bg-warm);
+    border-radius: 10px;
+}
+
+.archives .description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.newsletter input {
+    padding: 1vh 1vw;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-size: 11px;
+}
+
+.newsletter button {
+    background-color: var(--color-red);
+    padding: 1vh;
+    text-align: center;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-size: 11px;
+}
+
+.youtube video {
+    background: linear-gradient(45deg, white, var(--color-red-dark));
+    border-radius: 10px;
+}
+
+.youtube .vid-title {
+    font-size: 10px;
+    color: var(--color-text-dark);
+}
+
+.youtube a {
+    width: fit-content;
+    color: var(--color-red);
+    font-size: 10px;
+    font-weight: bolder;
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-red);
+}
+
+footer {
+    background-color: var(--color-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    color: white;
+    padding: 6vh;
+    text-align: center;
+}
+
+footer h2 {
+    font-family: "Playfair Display", serif;
+}
+
+footer p {
+    font-size: 11px;
+    color: var(--color-text-light);
+}
+
+footer .btn {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+footer button {
+    font-size: 10px;
+    font-weight: bolder;
+    padding: 1.5vh 1.5vw;
+    border-radius: 20px;
+}
+
+footer .white-btn {
+    background-color: white;
+    border: none;
+    color: var(--color-red);
+    transition: 0.3s;
+}
+
+footer .white-btn:hover {
+    background-color: whitesmoke;
+}
+
+footer .red-btn {
+    background-color: var(--color-red);
+    border: 1px solid var(--color-border);
+    color: white;
+    transition: 0.3s;
+}
+
+footer .red-btn:hover {
+    background-color: white;
+    color: var(--color-red);
+}
