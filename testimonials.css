@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    scroll-behavior: smooth;
+
+    --color-red: #b91c1c;
+    --color-red-dark: #991b1b;
+    --color-red-hover: #7f1d1d;
+
+    --color-bg-warm: #f9f6f1;
+    --color-bg-white: #ffffff;
+
+    --color-text-dark: #1a1a1a;
+    --color-text-muted: #78716c;
+    --color-text-light: #a8a29e;
+
+    --color-border: #e5e0d8;
+    --color-border-light: #f0ece4;
+
+    background-color: var(--color-bg-white);
+    font-family: "DM Sans", sans-serif;
+
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--color-red-dark);
+    width: 100%;
+    padding: 1vh 1.5vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    width: 10vw;
+}
+
+.navbar .logo img {
+    width: 100%;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+}
+
+.nav-links ul a {
+    text-decoration: none;
+    color: white;
+    font-size: 11px;
+    padding: 0.5vh 1vw;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5vw;
+}
+
+.cart input {
+    background-color: transparent;
+    border: none;
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    padding: 1vh 1.5vw;
+}
+
+.cart i {
+    color: white;
+    font-size: 2.5ch;
+}
+
+main {
+    margin-top: 8vh;
+}
+
+.title {
+    background-color: var(--color-bg-warm);
+    padding-block: 7vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5vh;
+    text-align: center;
+}
+
+.title .row1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 11px;
+    color: var(--color-text-light);
+}
+
+.red-line {
+    width: 2vw;
+    height: 0.2vh;
+    background-color: var(--color-red);
+    border: none;
+}
+
+.title h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 4ch;
+}
+
+#red-word {
+    color: var(--color-red);
+    font-style: italic;
+}
+
+.title p {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    text-align: center;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5vw;
+    font-size: 11px;
+    color: var(--color-text-light);
+    margin-bottom: 5px;
+}
+
+.students-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 4vh;
+    padding: 10vh 20vw;
+}
+
+.students-reviews .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1vw;
+    row-gap: 2vh;
+}
+
+.reviews-container article {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 1.5vh 1vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5vh;
+    align-items: left;
+    transition: 0.4s;
+}
+
+.reviews-container article:hover {
+    box-shadow: 4px 8px 15px rgba(0, 0, 0, 0.07);
+    transform: translateY(-2px);
+}
+
+.reviews-container .containts {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1.5vh;
+}
+
+.reviews-container .profile {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1vw;
+}
+
+.reviews-container .profile img {
+    width: 2vw;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.reviews-container .profile .details {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1vh;
+}
+
+.reviews-container .profile .details .author {
+    font-size: 11px;
+    font-weight: bolder;
+}
+
+.reviews-container .profile .details .role {
+    font-size: 10px;
+    color: var(--color-text-light);
+}
+
+.reviews-container .description {
+    font-size: 11px;
+    color: var(--color-text-muted);
+}
+
+.reviews-container .rating {
+    font-size: 0.7ch;
+    color: var(--color-red);
+}
+
+.reviews-container .rating .none {
+    color: var(--color-border-light);
+}
+
+.collaborators-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 4vh;
+    padding: 10vh 20vw;
+    background-color: var(--color-bg-warm);
+}
+
+.collaborators-reviews .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1vw;
+    row-gap: 2vh;
+}
+
+.collaborators-reviews article {
+    background-color: white;
+    padding: 3vh 2vw;
+    gap: 2vh;
+    justify-content: flex-start;
+}
+
+.collaborators-reviews .description {
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--color-text-dark);
+}
+
+.customers-reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 4vh;
+    padding: 10vh 20vw;
+}
+
+.customers-reviews .reviews-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1vw;
+    row-gap: 2vh;
+}
+
+.customers-reviews article {
+    padding: 2.5vh 1.5vw;
+}
+
+
+footer {
+    background-color: var(--color-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vh;
+    color: white;
+    padding: 6vh;
+    text-align: center;
+}
+
+footer h2 {
+    font-family: "Playfair Display", serif;
+}
+
+footer p {
+    font-size: 11px;
+    color: var(--color-text-light);
+}
+
+footer .btn {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+footer button {
+    font-size: 10px;
+    font-weight: bolder;
+    padding: 1.5vh 1.5vw;
+    border-radius: 20px;
+}
+
+footer .white-btn {
+    background-color: white;
+    border: none;
+    color: var(--color-red);
+    transition: 0.3s;
+}
+
+footer .white-btn:hover {
+    background-color: whitesmoke;
+}
+
+footer .red-btn {
+    background-color: var(--color-red);
+    border: 1px solid var(--color-border);
+    color: white;
+    transition: 0.3s;
+}
+
+footer .red-btn:hover {
+    background-color: white;
+    color: var(--color-red);
+}
