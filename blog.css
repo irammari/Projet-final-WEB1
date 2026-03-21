@@ -33,7 +33,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 100;
 }
 
 .navbar {
@@ -55,30 +55,54 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1vw;
+    gap: 2.2vw;
 }
 
 .nav-links ul a {
+    position: relative;
     text-decoration: none;
     color: white;
     font-size: 11px;
-    padding: 0.5vh 1vw;
+    padding-block: 0.5vh;
+}
+
+.nav-links ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+.nav-links ul li a:hover::after {
+    transform: scaleX(1);
 }
 
 .cart {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 0.5vw;
 }
 
 .cart input {
     background-color: transparent;
     border: none;
+    outline: none;
     font-size: 12px;
-    text-align: center;
     color: white;
-    padding: 1vh 1.5vw;
+}
+
+.cart input::placeholder {
+    color: var(--color-text-light);
+}
+
+.cart button {
+    background-color: transparent;
+    border: none;
 }
 
 .cart i {
@@ -145,9 +169,10 @@ main {
 
 .left-col {
     width: 75%;
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 2.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5vh;
 }
 
 .left-col article {
@@ -175,6 +200,12 @@ main {
     align-items: left;
 }
 
+.left-col .text-container .top-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
 .left-col h3 {
     color: var(--color-red);
     font-weight: 400;
@@ -200,6 +231,41 @@ main {
     color: white;
     padding-inline: 1ch;
     border-radius: 10px;
+}
+
+.left-col .page-navigation {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    margin-top: 1.5vh;
+}
+
+.left-col .page-navigation button {
+    padding: 0.8vh 0.7vw;
+    font-size: 11px;
+    border-radius: 8px;
+    border: 0.5px solid var(--color-border);
+    background-color: white;
+    color: var(--color-text-muted);
+    transition: 0.3s;
+}
+
+.left-col .page-navigation button:hover {
+    border-color: var(--color-red-hover);
+    color: var(--color-red);
+}
+
+.page-navigation .nb-page.active {
+  background: var(--color-red);
+  color: white;
+  border-color: var(--color-red);
+}
+
+.page-navigation .slider:disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
 }
 
 .right-col {
@@ -240,6 +306,7 @@ main {
     padding: 1vh 1vw;
     border-radius: 8px;
     border: 1px solid var(--color-border);
+    outline: none;
     font-size: 11px;
 }
 
@@ -252,10 +319,28 @@ main {
     border: none;
     color: white;
     font-size: 11px;
+    transition: 0.3s;
 }
 
-.youtube video {
-    background: linear-gradient(45deg, white, var(--color-red-dark));
+.newsletter button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.success {
+    font-style: italic;
+    font-weight: bolder;
+    color: var(--color-red);
+}
+
+.error {
+    text-align: center;
+    text-decoration: underline;
+    color: red;
+}
+
+.youtube iframe {
     border-radius: 10px;
 }
 
@@ -299,11 +384,12 @@ footer .btn {
     gap: 1vw;
 }
 
-footer button {
+footer a {
     font-size: 10px;
     font-weight: bolder;
     padding: 1.5vh 1.5vw;
     border-radius: 20px;
+    text-decoration: none;
 }
 
 footer .white-btn {
@@ -314,7 +400,7 @@ footer .white-btn {
 }
 
 footer .white-btn:hover {
-    background-color: whitesmoke;
+    background-color: var(--color-bg-warm);
 }
 
 footer .red-btn {

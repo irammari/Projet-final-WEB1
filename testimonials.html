@@ -18,7 +18,8 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="testimonials.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <title>T. Ramarozaka | Testimonials</title>
 </head>
 
 <body>
@@ -30,20 +31,34 @@
 
             <div class="nav-links">
                 <ul>
-                    <li><a href="">HOME</a></li>
+                    <li><a href="index.html">HOME</a></li>
                     <li><a href="blog.html">BLOG</a></li>
-                    <li><a href="">COURSES</a></li>
-                    <li><a href="">TESTIMONIALS</a></li>
-                    <li><a href="">RESEARCH</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                    <li><a href="research.html">RESEARCH</a></li>
                 </ul>
             </div>
 
             <div class="cart">
                 <input type="search" placeholder="Search anything...">
-                <a href=""><i class="fa-solid fa-basket-shopping"></i></a>
+                <button id="cart-icon">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
             </div>
         </nav>
     </header>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <p>Your cart</p>
+            <button id="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="cart-empty">Your cart is empty.</p>
+        </div>
+    </div>
 
     <main>
         <section class="title">
@@ -449,10 +464,12 @@
         </p>
 
         <div class="btn">
-            <button class="white-btn">BOOK A COURSE</button>
-            <button class="red-btn">COLLABORATE</button>
+            <a href="courses.html" class="white-btn">BOOK A COURSE</a>
+            <a href="" class="red-btn">COLLABORATE</a>
         </div>
     </footer>
+
+    <script src="cart.js"></script>
 </body>
 
 </html>

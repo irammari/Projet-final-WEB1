@@ -33,7 +33,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 999;
+    z-index: 100;
 }
 
 .navbar {
@@ -55,31 +55,56 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1vw;
+    gap: 2vw;
 }
 
 .nav-links ul a {
+    position: relative;
     text-decoration: none;
     color: white;
     font-size: 11px;
-    padding: 0.5vh 1vw;
+    padding-block: 0.5vh;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
 }
 
 .cart {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    gap: 0.5vw;
 }
 
 .cart input {
     background-color: transparent;
     border: none;
+    outline: none;
     font-size: 12px;
-    text-align: center;
     color: white;
-    padding: 1vh 1.5vw;
 }
+
+.cart input::placeholder {
+    color: var(--color-text-light);
+}
+
+.cart button {
+    background-color: transparent;
+    border: none;
+}
+
 
 .cart i {
     color: white;
@@ -301,11 +326,12 @@ footer .btn {
     gap: 1vw;
 }
 
-footer button {
+footer a {
     font-size: 10px;
     font-weight: bolder;
     padding: 1.5vh 1.5vw;
     border-radius: 20px;
+    text-decoration: none;
 }
 
 footer .white-btn {
