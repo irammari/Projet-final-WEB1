@@ -48,7 +48,8 @@ function createCourseCard(course) {
 
             <div class="course-card-btns">
                 <button class="course-learn-more-btn">Learn more</button>
-                <button class="course-book-btn">Add to cart</button>            
+                <button class="course-book-btn" 
+                onclick="addToCart('${course.id}', '${course.title}', ${course.price})">Add to cart</button>            
             </div>
         </div>
 `
@@ -58,10 +59,15 @@ const gallery = document.querySelector(".courses-gallery");
 
 function showCourses(coursesArray) {
     gallery.innerHTML = "";
+    if (coursesArray.length === 0) {
+        gallery.innerHTML = `<p class="no-results">No courses match your filters</p>`;
+        return;
+    }
     coursesArray.forEach(course => {
         gallery.innerHTML += createCourseCard(course);
     });
 }
+
 showCourses(data.courses);
 
 const langIcons = document.querySelectorAll(".lang-icons span");
@@ -134,4 +140,9 @@ clearFiltersBtn.addEventListener('click', (event) => {
 
     searchFilter.value = null;
     showCourses(data.courses);
+})
+
+const addCartBtn = document.querySelector(".course-book-btn");
+addCartBtn.addEventListener('click', () => {
+    addToCart(course.id, )
 })

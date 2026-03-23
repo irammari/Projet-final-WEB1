@@ -60,7 +60,7 @@ header {
     position: relative;
     text-decoration: none;
     color: white;
-    font-size: 11px;
+    font-size: 14px;
     padding-block: 0.5vh;
 }
 
@@ -125,7 +125,7 @@ main {
     display:flex;
     flex-direction: column;
     gap: 2rem;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .hero-header-small {
@@ -139,15 +139,15 @@ main {
 .hero-header-small::before {
     content: "";
     display: inline-block;
-    width: 2vw;
-    height: 0.2vh;
+    width: 2.5vw;
+    height: 1.5px;
     background-color: var(--color-red);
     margin-right: 0.5rem;
     vertical-align: middle;
 }
 
 .hero-content h1{
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'playfair display', serif;
     font-weight: 600;
 }
@@ -224,6 +224,12 @@ main {
     gap: 1.5rem;
     padding-left: 0.5rem;
     transition: 0.5s ease;
+    font-size: 1.2rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--color-text-muted);
 }
 
 .social-icons i {
@@ -241,7 +247,7 @@ main {
 }
 
 .hero-img img{
-    width: 25vw;
+    width: 23vw;
     border-radius: 50%;
     border: 2px solid #991b1b7c;
     padding: 0.5rem;
@@ -250,8 +256,8 @@ main {
 .hero-img::before {
     content: "";
     position: absolute;
-    width: 25vw;
-    height: 25vw;
+    width: 23vw;
+    height: 23vw;
     border-radius: 50%;
     background:#e4c8c4;
     z-index: -1;
@@ -276,15 +282,15 @@ main {
 .small-header::before {
     content: "";
     display: inline-block;
-    width: 2vw;
-    height: 1px;
+    width: 2.5vw;
+    height: 1.5px;
     background-color: var(--color-red);
     margin-right: 0.5rem;
     vertical-align: middle;
 }
 
 .small-header {
-    font-size: 11px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-family: "DM Sans", sans-serif;
     color: var(--color-text-light);
@@ -306,12 +312,12 @@ main {
     display: flex;
     flex-direction: column;
     gap: 5vh;
-    max-width: 50%;
+    max-width: 40%;
     color: var(--color-text-muted);
 }
 
 p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 hr {
@@ -333,7 +339,7 @@ hr {
 .xp-text {
     color: var(--color-text-muted);
     text-transform: uppercase;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 #about-courses {
@@ -358,8 +364,8 @@ hr {
 .about-courses-header .small-header::after{
     content: "";
     display: inline-block;
-    width: 2vw;
-    height: 1px;
+    width: 2.5vw;
+    height: 1.5px;
     background-color: var(--color-red);
     margin-left: 0.5rem;
     vertical-align: middle;
@@ -380,12 +386,15 @@ hr {
     gap: 2rem;
 }
 
+
+
 .card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 28vh;
-    width: 26vw;
+    height: 26vh;
+    width: 28vw;
+    gap: 2vh;
     border: 1px solid var(--color-border-light);
     background-color: white;
     padding: 20px;
@@ -411,7 +420,7 @@ hr {
     border-radius: 20px;
     text-align: center;
     padding: 6px;
-    font-size: 11px;
+    font-size: 14px;
     width: fit-content;
 }
 
@@ -433,7 +442,7 @@ hr {
 }
 
 .details p{
-    font-size: 11px;
+    font-size: 14px;
     color: var(--color-text-muted);
 }
 #about-xp {
@@ -532,7 +541,7 @@ footer h2 {
 }
 
 footer p {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--color-text-light);
 }
 
