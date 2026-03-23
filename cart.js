@@ -67,4 +67,4 @@ document.getElementById('cart-icon').addEventListener('click', (e) => {
 document.getElementById('cart-close').addEventListener('click', closeCart);
 document.getElementById('cart-overlay').addEventListener('click', closeCart);
 
-updateCartCount();c
+updateCartCount();
