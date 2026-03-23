@@ -7,31 +7,18 @@
     margin: 4rem 0;
 }
 
-.courses-header-small::before {
+.courses-header .small-header::after {
     content: "";
     display: inline-block;
-    width: 2.5vw;
-    height: 2.5px;
-    background-color: var(--color-red-dark);
-    margin-right: 0.5rem;
-    vertical-align: middle;
-}
-.courses-header-small::after {
-    content: "";
-    display: inline-block;
-    width: 2.5vw;
-    height: 2.5px;
-    background-color: var(--color-red-dark);
+    width: 2vw;
+    height: 0.2vh;
+    background-color: var(--color-red);
     margin-left: 0.5rem;
     vertical-align: middle;
 }
 
-.courses-header-small{
-<<<<<<< HEAD
-    font-size: 0.8rem;
-=======
+.small-header{
     font-size: 0.7rem;
->>>>>>> 6e14405e3928c1ef40a2b28f072f82ef268ec7f0
     letter-spacing: 1px;
     color: var(--color-text-light);
 }
@@ -48,18 +35,13 @@
 }
 
 .courses-header-text {
-<<<<<<< HEAD
     color: var(--color-text-light);
-=======
-    color: var(--color-text-muted);
->>>>>>> 6e14405e3928c1ef40a2b28f072f82ef268ec7f0
     text-align: center;
     max-width: 500px;
 }
 
 .courses-page {
     background-color: var(--color-bg-white);
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     gap: 5rem;
@@ -182,14 +164,15 @@
     background: white;
     width: 22vw;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-    border-radius: 8px;
+    border-radius: 10px;
     position: relative;
 }
 
 .course-card img {
-    width: 100%;
+    width: 22vw;
     object-fit: cover;
     border-radius: 8px 8px 0 0;
+    height: 100%;
 }
 
 .course-card span { 
@@ -204,7 +187,7 @@
     font-size: 0.7rem;
     font-weight: 600;
     background-color: white;
-    border-radius: 30%;
+    border-radius: 14px;
     width: 3vw;
     height: 2.5vh;
     top: 8px;
@@ -219,8 +202,7 @@
     font-weight: 600;
     color: white;
     background-color: var(--color-text-dark);
-    border-radius: 30%;
-    /* width: 3vw; */
+    border-radius: 14px;
     padding: 0.5rem;
     height: 2.5vh;
     top: 8px;
@@ -233,33 +215,24 @@
 
 .course-level-tag{
     bottom: 0.2rem;
-    right: 1px;
+    right: 0;
     color: white;
-    padding: 0.5rem;
-    border-radius: 5%;
+    border-top-left-radius: 4px;
+    padding: 0.4rem;
 }
 
 .level-beginner{
-    background-color: green;
+    background-color: rgba(0, 122, 51, 0.89);
 }
 
 .level-intermediate{
-    background-color: orange;
+    background-color: rgba(255, 153, 19, 0.897);
 }
 
 .level-advanced{
-    background-color: red;
+    background-color: rgb(231, 6, 6);
 }
 
 .course-title {
     margin-top: 0.5rem;
-=======
-}
-
-.courses-filters {
-    background-color: var(--color-bg-warm);
-    height: 20vh;
-    margin: 2rem 5rem;
-    border-radius: 10px;
->>>>>>> 6e14405e3928c1ef40a2b28f072f82ef268ec7f0
 }

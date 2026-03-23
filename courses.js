@@ -36,8 +36,8 @@ function createCourseCard(course) {
                     : ''}
                 </div>
                 
-                <img src="${course.thumbnail}" alt="course img"> 
                 <span class="course-level-tag ${levelClass}">${course.level}</span>
+                <img src="${course.thumbnail}" alt="course img"> 
             </div>
 
             <div class="course-card-info">

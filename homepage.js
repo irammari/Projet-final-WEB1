@@ -1,15 +1,49 @@
 document.querySelector(".about1").textContent = data.aboutMe_part1;
 document.querySelector(".about2").textContent = data.aboutMe_part2;
 
-const container = document.querySelector(".about-me-xp");
+const xpContainer = document.querySelector(".about-me-xp");
 
 data.overview.forEach(item => {
-  const block = document.createElement("div");
+  const xpNumText = document.createElement("div");
 
-  block.innerHTML = `
+  xpNumText.innerHTML = `
     <div class="xp-num">${item.number}</div>
     <div class="xp-text">${item.label}</div>
   `;
 
-  container.appendChild(block);
+  xpContainer.appendChild(xpNumText);
+});
+
+const homeCourses = document.querySelector(".about-courses-cards");
+
+data.homeCourses.forEach(item => {
+  const courseCard = document.createElement("div");
+  courseCard.classList.add("card");
+
+  courseCard.innerHTML = `
+    <p class="tag">${item.tag}</p>
+  <h3>${item.title}</h3>
+  <hr>
+  <div class="details">
+      <p>${item.mode}</p>
+      <p>${item.duration}</p>
+  `
+
+  homeCourses.appendChild(courseCard);
+})
+
+const xpGrid = document.querySelector(".xp-grid");
+
+data.experiences.forEach(exp => {
+  const item = document.createElement("div");
+  item.className = "xp-item";
+
+  item.innerHTML = `
+    <div class="year">${exp.year}</div>
+    <div class="role">${exp.role}</div>
+    <div class="org">${exp.org}</div>
+    <div class="desc">${exp.desc}</div>
+  `;
+
+  xpGrid.appendChild(item);
 });
