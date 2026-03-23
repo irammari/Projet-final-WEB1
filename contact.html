@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="cart.css">
+    <title>T. Ramarozaka | Contacts</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href=""><img src="assets/logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="courses.html">COURSES</a></li>
+                    <li><a href="testimonials.html">TESTIMONIALS</a></li>
+                    <li><a href="research.html">RESEARCH</a></li>
+                </ul>
+            </div>
+
+            <div class="cart">
+                <input type="search" placeholder="Search anything...">
+                <button id="cart-icon">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <p>Your cart</p>
+            <button id="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="cart-empty">Your cart is empty.</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="title">
+            <div class="row1">
+                <hr class="red-line">
+                GET IN TOUCH
+                <hr class="red-line">
+            </div>
+
+            <h1>Want to <span id="red-word">talk</span> ?</h1>
+
+            <p>Have a question or a collaboration in mind? Fill in the form bellow.</p>
+        </section>
+
+        <section class="contact-us">
+            <div class="tokimahery">
+                <div class="first-contacts">
+                    <div class="profile">
+                        <div class="image">
+                            <img src="assets/square-image.jpg" alt="">
+                            <div class="back1"></div>
+                            <div class="back2"></div>
+                            <div class="back3"></div>
+                        </div>
+
+                        <div class="name">
+                            <div class="row">
+                                <hr class="red-line">
+                                <h2>Tokimahery</h2>
+                            </div>
+                            <h2 class="red">RAMAROZAKA</h2>
+                        </div>
+                    </div>
+
+                    <div class="t-contacts">
+
+                        <div class="line">
+                            <h3>Phone :</h3>
+                            <p>+261 33 82 044 88</p>
+                        </div>
+
+                        <div class="line">
+                            <h3>E-mail :</h3>
+                            <p>contact@beloyalit.com</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="contact-links">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <form>
+                <div class="blank">
+                    <label for="name">Name : <span style="color:#E24B4A">*</span></label>
+                    <input type="text" id="name" placeholder="John DOE">
+                </div>
+
+                <div class="contact">
+                    <div>
+                        <label for="e_mail">E-mail : <span style="color:#E24B4A">*</span></label>
+                        <input type="email" id="e-mail" placeholder="your@email.com">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone : <span style="color:#E24B4A">*</span></label>
+                        <input type="text" id="phone" placeholder="Phone number">
+                    </div>
+
+                </div>
+
+                <div class="subject">
+                    <label>Subject : <span style="color:#E24B4A">*</span></label>
+                    <select id="subject">
+                        <option value="" disabled selected id="nope">Select a subject</option>
+                        <option>Course inquiry</option>
+                        <option>Research collaboration</option>
+                        <option>Speaking invitation</option>
+                        <option>Consulting</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="blank">
+                    <label for="message">Message :</label>
+                    <textarea name="" id="message"
+                        placeholder="Type some description here."></textarea>
+                </div>
+
+                <button class="white-btn">Submit</button>
+            </form>
+        </section>
+    </main>
+
+
+    <script src="cart.js"></script>
+</body>
+
+</html>

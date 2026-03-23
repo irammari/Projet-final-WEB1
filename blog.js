@@ -1,4 +1,4 @@
-const PER_PAGE = 5; // articles par page
+const PER_PAGE = 5;
 let currentPage = 1;
 
 const articles = document.querySelectorAll('.left-col article');
@@ -10,29 +10,27 @@ const button = document.querySelector('.newsletter button');
 function showPage(page) {
     currentPage = page;
 
-    // Cacher/montrer les articles
     articles.forEach((article, i) => {
         const start = (page - 1) * PER_PAGE;
         article.style.display = (i >= start && i < start + PER_PAGE) ? 'flex' : 'none';
     });
 
-    // Mettre à jour les boutons de page
     document.querySelectorAll('.nb-page').forEach((btn, i) => {
         btn.classList.toggle('active', i + 1 === page);
     });
 
-    // Désactiver Prev/Next aux extrémités
     document.querySelectorAll('.slider')[0].disabled = (page === 1);
     document.querySelectorAll('.slider')[1].disabled = (page === totalPages);
+
+    document.querySelector('.left-col').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// Générer les boutons de page dynamiquement
+
 function buildPagination() {
     const nav = document.querySelector('.page-navigation');
     const prevBtn = nav.querySelector('.slider:first-child');
     const nextBtn = nav.querySelector('.slider:last-child');
 
-    // Vider les anciens boutons de numéro
     nav.querySelectorAll('.nb-page').forEach(b => b.remove());
 
     for (let i = totalPages; i >= 1; i--) {
