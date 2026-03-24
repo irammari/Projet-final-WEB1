@@ -5,12 +5,18 @@ function saveCart() {
 }
 
 function renderCartItems() {
+    if (!cart) {
+        return
+    };
+    
     const container = document.getElementById('cart-items');
     const footer = document.getElementById('cart-footer');
 
     if (cart.length === 0) {
         container.innerHTML = '<p class="cart-empty">Your cart is empty.</p>';
-        footer.style.display = 'none';
+        if (footer) {
+            footer.style.display = 'none';
+        }
     } else {
         container.innerHTML = cart.map(item => `
             <div class="cart-item">
@@ -119,6 +125,9 @@ document.getElementById('cart-icon').addEventListener('click', (e) => {
     openCart();
 });
 document.getElementById('cart-close').addEventListener('click', closeCart);
-document.getElementById('confirm-order-btn').addEventListener('click', confirmOrder);
+const confirmBtn = document.getElementById('confirm-order-btn');
+if (confirmBtn) {
+  confirmBtn.addEventListener('click', confirmOrder);
+}
 
 updateCartCount();
