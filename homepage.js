@@ -14,15 +14,17 @@ data.overview.forEach(item => {
   xpContainer.appendChild(xpNumText);
 });
 
-const homeCourses = document.querySelector(".about-courses-cards");
+const homeCourses = document.querySelector(".home-courses-cards");
 
 data.homeCourses.forEach(item => {
   const courseCard = document.createElement("div");
   courseCard.classList.add("card");
 
   courseCard.innerHTML = `
+  <div class="card-content">
     <p class="tag">${item.tag}</p>
-  <h3>${item.title}</h3>
+    <h3>${item.title}</h3>
+  </div>
   <hr>
   <div class="details">
       <p>${item.mode}</p>

@@ -22,6 +22,7 @@
     background-color: var(--color-bg-warm);
     font-family: "DM Sans", sans-serif;
     scroll-behavior: smooth;
+    font-size: 14px;
 }
 
 header {
@@ -60,7 +61,7 @@ header {
     position: relative;
     text-decoration: none;
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     padding-block: 0.5vh;
 }
 
@@ -125,24 +126,23 @@ main {
     display:flex;
     flex-direction: column;
     gap: 2rem;
-    font-size: 14px;
 }
 
 .hero-header-small {
-    display: flex;
+    letter-spacing: 1px;
+    font-family: "DM Sans", sans-serif;
+    color: var(--color-text-light);
+    display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    letter-spacing: 1px;
-    color: var(--color-red);
 }
 
 .hero-header-small::before {
     content: "";
-    display: inline-block;
-    width: 2.5vw;
-    height: 1.5px;
+    width: 30px;
+    height: 2px;
     background-color: var(--color-red);
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     vertical-align: middle;
 }
 
@@ -179,12 +179,13 @@ main {
 }
 
 .buttons *{
-    padding: 1.2rem 2rem;  
+    padding: 1rem 1.4rem;  
     font-weight: 700;
     cursor: pointer;    
     border-radius: 8px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.13);
     text-decoration: none;
+    width: fit-content;
 }
 
 .book-btn {
@@ -207,13 +208,13 @@ main {
     border: 0.5px solid var(--color-text-muted);
 }
 
-.collab-btn {
+.underline-btn {
     padding: 0.4rem;
     color: var(--color-red);
     text-underline-offset: 0.3rem;
 }
 
-.collab-btn:hover {
+.underline-btn:hover {
     color: rgb(250, 82, 82);
     cursor: pointer;
 }
@@ -279,21 +280,23 @@ main {
     gap: 0.5rem;
 }
 
-.small-header::before {
+.small-header::before,
+.home-courses-header .small-header::after {
     content: "";
-    display: inline-block;
-    width: 2.5vw;
-    height: 1.5px;
+    width: 30px;
+    height: 2px;
     background-color: var(--color-red);
-    margin-right: 0.5rem;
+    margin-left: 0.5rem;
     vertical-align: middle;
 }
 
 .small-header {
-    font-size: 14px;
     letter-spacing: 1px;
     font-family: "DM Sans", sans-serif;
     color: var(--color-text-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .about-me-title {
@@ -316,10 +319,6 @@ main {
     color: var(--color-text-muted);
 }
 
-p {
-    font-size: 14px;
-}
-
 hr {
     border: 1px solid var(--color-border);
 }
@@ -339,10 +338,9 @@ hr {
 .xp-text {
     color: var(--color-text-muted);
     text-transform: uppercase;
-    font-size: 14px;
 }
 
-#about-courses {
+#home-courses {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -352,7 +350,7 @@ hr {
     gap: 8vh;
 }
 
-.about-courses-header {
+.home-courses-header {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -360,54 +358,49 @@ hr {
     font-family: 'playfair display', serif;
 }
 
-
-.about-courses-header .small-header::after{
-    content: "";
-    display: inline-block;
-    width: 2.5vw;
-    height: 1.5px;
-    background-color: var(--color-red);
-    margin-left: 0.5rem;
-    vertical-align: middle;
-}
-
-.about-courses-header h1{
+.home-courses-header h1{
     text-align: center;
 }
 
-.about-courses-header h1 span {
+.home-courses-header h1 span {
     font-style: italic;
 }
 
-.about-courses-cards {
+.home-courses-cards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 2rem;
 }
 
-
-
 .card {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    height: 26vh;
-    width: 28vw;
-    gap: 2vh;
-    border: 1px solid var(--color-border-light);
+    justify-content: space-between;
+    min-height: 200px;
+    flex: 1;
+    gap: 1rem;
+    border: 2px solid var(--color-border-light);
     background-color: white;
     padding: 20px;
     border-radius: 18px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card h3{
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card h3 {
     font-family: "Playfair Display", serif;
+    line-height: 1.3;
+    min-height: 3em;
 }
-
 .card:hover {
-    transform: scale(1.04);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .details {
@@ -420,19 +413,18 @@ hr {
     border-radius: 20px;
     text-align: center;
     padding: 6px;
-    font-size: 14px;
     width: fit-content;
 }
 
-.about-courses-cards .card:nth-child(1) .tag{
+.home-courses-cards .card:nth-child(1) .tag{
     background-color: red
 }
 
-.about-courses-cards .card:nth-child(2) .tag{
+.home-courses-cards .card:nth-child(2) .tag{
     background-color: black
 }
 
-.about-courses-cards .card:nth-child(3) .tag {
+.home-courses-cards .card:nth-child(3) .tag {
     background-color: gray
 }
 
@@ -442,12 +434,16 @@ hr {
 }
 
 .details p{
-    font-size: 14px;
     color: var(--color-text-muted);
 }
+
+#home-courses .underline-btn{
+    text-align: center;
+}
+
 #about-xp {
-  padding: 4rem 2rem;
-  background-color: white;
+    background-color: white;
+    padding: 60px;
 }
 
 #about-xp h1 {
@@ -455,11 +451,22 @@ hr {
   margin-bottom: 2rem;
 }
 
+.about-xp-header {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+}
+
+.xp-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
 .xp-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 4rem;
-  position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    width: 100%;
 }
 
 .xp-item {
@@ -470,8 +477,8 @@ hr {
   background-color: var(--color-bg-white);
   display: flex;
   flex-direction: column;
-  gap: 2vh;
-  padding: 6vh;
+  gap: 0.5rem;
+  padding: 1.5rem;
 }
 
 .xp-item:nth-child(odd) {
@@ -520,7 +527,6 @@ hr {
 }
 
 .desc {
-  font-size: 0.9rem;
   color: #444;
   line-height: 1.4;
 }
@@ -538,11 +544,7 @@ footer {
 
 footer h2 {
     font-family: "Playfair Display", serif;
-}
-
-footer p {
-    font-size: 14px;
-    color: var(--color-text-light);
+    font-size: 28px;
 }
 
 footer .btn {
@@ -559,6 +561,10 @@ footer a {
     text-decoration: none;
 }
 
+footer p{
+    font-size: 14px;
+}
+
 footer .red-btn {
     background-color: var(--color-red);
     border: 1px solid var(--color-border);
@@ -569,4 +575,158 @@ footer .red-btn {
 footer .red-btn:hover {
     background-color: white;
     color: var(--color-red);
+}
+
+@media (max-width: 412px) {
+
+    header {
+        padding: 1.2vh 4vw;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 1.2vh;
+        justify-content: space-between;
+    }
+
+    .navbar .logo {
+        width: 28vw;
+        order: 1;
+    }
+
+    .cart {
+        order: 2;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+    }
+
+    .cart input {
+        display: none;
+    }
+
+    .nav-links ul {
+        gap: 4vw;
+        overflow-x: auto;
+        padding-bottom: 2px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .nav-links ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links ul a {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .cart i {
+        font-size: 2ch;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        gap: 5vw;
+        padding: 2rem 3%;
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-description, 
+    .hero-text {
+        font-size: 12px;
+    }
+
+    .buttons {
+        gap: 1rem;
+    }
+
+    .buttons * {
+        padding: 0.7rem 1rem;
+        font-size: 12px;
+    }
+
+    .social-icons {
+        gap: 1rem;
+        font-size: 1rem;
+    }
+
+    .hero-img img {
+        width: 50vw;
+    }
+
+    .hero-img::before {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    #about-me {
+        flex-direction: column;
+        padding: 10vh 3%;
+        gap: 5vh;
+        text-align: center;
+    }
+
+    .about-me-text {
+        max-width: 100%;
+    }
+
+    .about-me-header {
+        align-items: center;
+    }
+
+    .home-courses-cards {
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .home-courses-cards .card {
+        width: 60vw;
+        min-height: auto;
+    }
+
+    .xp-grid {
+        display: block;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .xp-item {
+        grid-column: unset;
+        width: 100%;
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    .xp-item::before {
+        left: 0;
+    }
+
+    footer {
+        padding: 4vh 3%;
+        gap: 1.5vh;
+    }
+
+    footer .btn {
+        flex-direction: column;
+        gap: 1vh;
+    }
+    
+    footer a {
+        width: 95%;
+    }
+
 }

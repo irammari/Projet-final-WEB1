@@ -2,7 +2,7 @@ const priceMin = document.getElementById("price-min");
 const priceMax = document.getElementById("price-max");
 const priceMinSlider = document.getElementById("price-min-slider");
 const priceMaxSlider = document.getElementById("price-max-slider");
-const clearFiltersBtn = document.getElementById("clearFiltersBtn");
+const clearFiltersBtn = document.querySelector("#clearFiltersBtn");
 
 function setPrice() {
     priceMin.textContent = Number(priceMinSlider.value).toLocaleString("en-US");
@@ -40,17 +40,20 @@ function createCourseCard(course) {
                 <img src="${course.thumbnail}" alt="course img"> 
             </div>
 
-            <div class="course-card-info">
-                <h3 class="course-title">${course.title}</h3>
-                <p class="course-price">${course.price.toLocaleString("en-US")} Ar</p>
-                <p class="course-description">${course.description}</p>
-            </div>
+            <div class="course-card-content">
+                <div class="course-card-info">
+                    <h3 class="course-title">${course.title}</h3>
+                    <p class="course-price">MGA ${course.price.toLocaleString("en-US")}</p>
+                    <p class="course-description">${course.description}</p>
+                </div>
 
-            <div class="course-card-btns">
-                <button class="course-learn-more-btn">Learn more</button>
-                <button class="course-book-btn" 
-                onclick="addToCart('${course.id}', '${course.title}', ${course.price})">Add to cart</button>            
+                <div class="course-card-btns">
+                    <button class="toggle-btn">Learn more</button>
+                    <button class="course-book-btn" 
+                    onclick="addToCart('${course.id}', '${course.title}', ${course.price})">Add to cart</button>            
+                </div>
             </div>
+            
         </div>
 `
 }
@@ -58,9 +61,18 @@ function createCourseCard(course) {
 const gallery = document.querySelector(".courses-gallery");
 
 function showCourses(coursesArray) {
+    const countLabel = document.querySelector(".courses-count");
+
+    countLabel.textContent = `${coursesArray.length} course${coursesArray.length !== 1 ? 's' : ''} found`;
+
     gallery.innerHTML = "";
     if (coursesArray.length === 0) {
-        gallery.innerHTML = `<p class="no-results">No courses match your filters</p>`;
+        gallery.innerHTML = `
+        <div class="no-results">
+            <p class="no-results-header">No courses match your filters.</p>
+            <a href="#" class="clearFiltersLink">CLEAR ALL FILTERS</a>
+        </div>
+        `;
         return;
     }
     coursesArray.forEach(course => {
@@ -69,6 +81,22 @@ function showCourses(coursesArray) {
 }
 
 showCourses(data.courses);
+
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const card = btn.closest('.course-card');
+    const desc = card.querySelector(".course-description");
+    desc.classList.toggle('expanded');
+    btn.textContent = desc.classList.contains('expanded') ? 'Cancel' : 'Learn more';
+
+    if (desc.classList.contains('expanded')) {
+      btn.textContent = 'Cancel';
+    } else {
+      btn.textContent = 'Learn more';
+    }
+  });
+});
+
 
 const langIcons = document.querySelectorAll(".lang-icons span");
 const techFilter = document.getElementById("tech-select");
@@ -83,15 +111,19 @@ langIcons.forEach(icon => icon.classList.add('active'));
 langIcons.forEach(icon => {
     icon.addEventListener('click', () => {
         icon.classList.toggle('active');
-        selectedLangs = [...document.querySelectorAll(".lang-icons span.active")].map(icon => icon.id);
+
+        selectedLangs = [...document.querySelectorAll(".lang-icons span.active")]
+            .map(icon => icon.id);
+
         if (selectedLangs.length === 0) {
-            selectedLangs = [...document.querySelectorAll(".lang-icons span")].map(icon => icon.id);
+            langIcons.forEach(i => i.classList.add('active'));
+
+            selectedLangs = [...langIcons].map(icon => icon.id);
         }
 
         filter();
     });
 });
-
 techFilter.addEventListener('change', filter);
 levelFilter.addEventListener('change', filter);
 priceMinFilter.addEventListener('input', filter);
@@ -126,21 +158,35 @@ function filter() {
     showCourses(filtered);
 }
 
-clearFiltersBtn.addEventListener('click', (event) => {
-    event.preventDefault();
+function clearFilters() {
     langIcons.forEach(icon => icon.classList.add('active'));
 
-    techFilter.value = "all";
+    selectedLangs = [...langIcons].map(icon => icon.id);
 
+    techFilter.value = "all";
     levelFilter.value = "all";
 
-    priceMinFilter = priceMinSlider.min
-    priceMaxFilter = priceMaxSlider.max;
+    priceMinFilter.value = priceMinSlider.min;
+    priceMaxFilter.value = priceMaxSlider.max;
+
     setPrice();
 
-    searchFilter.value = null;
-    showCourses(data.courses);
-})
+    searchFilter.value = "";
+
+    filter();
+}
+
+clearFiltersBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    clearFilters();
+});
+
+document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('clearFiltersLink')) {
+        e.preventDefault();
+        clearFilters();
+    }
+});
 
 const addCartBtn = document.querySelector(".course-book-btn");
 addCartBtn.addEventListener('click', () => {

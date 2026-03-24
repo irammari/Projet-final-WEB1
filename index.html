@@ -49,14 +49,16 @@
         </nav>
     </header>
 
-    <div class="cart-overlay" id="cart-overlay"></div>
-    <div class="cart-drawer" id="cart-drawer">
+    <div id="cart-drawer" class="cart-drawer">
         <div class="cart-drawer-header">
-            <p>Your cart</p>
+            <p>My Cart</p>
             <button id="cart-close">✕</button>
         </div>
-        <div class="cart-items" id="cart-items">
-            <p class="cart-empty">Your cart is empty.</p>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer" id="cart-footer">
+            <hr>
+            <p>Total: <span id="cart-total-price">0 Ar</span></p>
+            <button id="confirm-order-btn" class="order-btn">CONFIRM YOUR ORDER</button>
         </div>
     </div>
 
@@ -79,7 +81,7 @@
                     <a href="#about-me" class="aboutme-btn">About me</a>
                 </div>
 
-                <a href="contact.html" class="collab-btn">ASK FOR A COLLABORATION → </a>
+                <a href="contact.html" class="underline-btn">ASK FOR A COLLABORATION → </a>
 
                 <div class="social-icons">
                     <a href="https://www.facebook.com/tokimahery" target="_blank">
@@ -123,24 +125,28 @@
             </div>
         </section>
 
-        <section id="about-courses">
-            <div class="about-courses-header">
+        <section id="home-courses">
+            <div class="home-courses-header">
                 <p class="small-header">LEARNING</p>
                 <h1>Courses <span>online</span><br>
                     and offline</h1>
             </div>
 
-            <div class="about-courses-cards">
+            <div class="home-courses-cards">
             </div>
+
+                <a href="courses.html" class="underline-btn">VIEW ALL COURSES →</a>
 
         </section>
 
         <section id="about-xp">
-            <div class="about-bg-header">
+            <div class="about-xp-header">
                 <p class="small-header">BACKGROUND</p>
                 <h1>Experience</h1>
             </div>
-            <div class="xp-grid">
+            <div class="xp-wrapper">
+                <div class="xp-grid">
+                </div>
             </div>
         </section>
     </main>

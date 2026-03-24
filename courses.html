@@ -3,17 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T. Ramarozaka's Courses</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="courses.css">
-    <link rel="stylesheet" href="cart.css">
-    <link rel="stylesheet" href="blog.css">
+    <title>T. Ramarozaka | Courses</title>
 
-    <script src="tokimahery.data.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,10０;1,2００;1,3００;1,4００;1,5００;1,6００;1,7００;1,8００;1,9００&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" ... />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icons/6.11.0/css/flag-icons.min.css">
+
+
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="courses.css">
+
+    <script src="tokimahery.data.js" defer></script>
+    <script src="homepage.js" defer></script>
+    <script src="cart.js" defer></script>
     <script src="courses.js" defer></script>
-    <script src="cart.js"></script>
 
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -41,14 +53,16 @@
         </nav>
     </header>
 
-    <div class="cart-overlay" id="cart-overlay"></div>
-    <div class="cart-drawer" id="cart-drawer">
+    <div id="cart-drawer" class="cart-drawer">
         <div class="cart-drawer-header">
-            <p>Your cart</p>
+            <p>My Cart</p>
             <button id="cart-close">✕</button>
         </div>
-        <div class="cart-items" id="cart-items">
-            <p class="cart-empty">Your cart is empty.</p>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer" id="cart-footer">
+            <hr>
+            <p>Total: <span id="cart-total-price">0 Ar</span></p>
+            <button id="confirm-order-btn" class="order-btn">CONFIRM YOUR ORDER</button>
         </div>
     </div>
 
@@ -115,7 +129,11 @@
                 </div>
 
             </form>
+
             <hr>
+        
+            <p class="courses-count">0 courses found</p>
+
             <div class="courses-gallery">
             </div>
 
@@ -123,7 +141,7 @@
     </main>
     <footer>
         <h2>Not sure where to start?</h2>
-        <p>Whether you're looking for a course, a consultation, or a translation &emdash; let's talk.</p>
+        <p>Whether you're looking for a course, a consultation, or a translation — let's talk.</p>
 
 
         <div class="btn">

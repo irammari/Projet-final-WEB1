@@ -1,29 +1,27 @@
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box
 }
 
 :root {
-    scroll-behavior: smooth;
+    --color-red:          #b91c1c;
+    --color-red-dark:     #991b1b;
+    --color-red-hover:    #7f1d1d;
 
-    --color-red: #b91c1c;
-    --color-red-dark: #991b1b;
-    --color-red-hover: #7f1d1d;
+    --color-bg-warm:      #f9f6f1;
+    --color-bg-white:     #ffffff;
 
-    --color-bg-warm: #f9f6f1;
-    --color-bg-white: #ffffff;
+    --color-text-dark:    #1a1a1a;
+    --color-text-muted:   #78716c;
+    --color-text-light:   #a8a29e;
 
-    --color-text-dark: #1a1a1a;
-    --color-text-muted: #78716c;
-    --color-text-light: #a8a29e;
-
-    --color-border: #e5e0d8;
+    --color-border:       #e5e0d8;
     --color-border-light: #f0ece4;
 
-    background-color: var(--color-bg-white);
+    background-color: var(--color-bg-warm);
     font-family: "DM Sans", sans-serif;
-
+    scroll-behavior: smooth;
 }
 
 header {
@@ -62,7 +60,7 @@ header {
     position: relative;
     text-decoration: none;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     padding-block: 0.5vh;
 }
 
@@ -129,13 +127,13 @@ main {
     justify-content: center;
     align-items: center;
     gap: 0.5vw;
-    font-size: 11px;
+    font-size: 14px;
     color: var(--color-text-light);
 }
 
 .red-line {
     width: 2vw;
-    height: 0.2vh;
+    height: 1.5px;
     background-color: var(--color-red);
     border: none;
 }
@@ -151,7 +149,7 @@ main {
 }
 
 .title p {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--color-text-muted);
     text-align: center;
 }
@@ -164,7 +162,7 @@ main {
 }
 
 .main-blog p {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .left-col {
@@ -244,7 +242,7 @@ main {
 
 .left-col .page-navigation button {
     padding: 0.8vh 0.7vw;
-    font-size: 11px;
+    font-size: 14px;
     border-radius: 8px;
     border: 0.5px solid var(--color-border);
     background-color: white;
@@ -280,7 +278,7 @@ main {
     display: flex;
     align-items: center;
     gap: 0.5vw;
-    font-size: 11px;
+    font-size: 14px;
     color: var(--color-text-light);
     margin-bottom: 5px;
 }
@@ -307,7 +305,7 @@ main {
     border-radius: 8px;
     border: 1px solid var(--color-border);
     outline: none;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .newsletter button {
@@ -318,7 +316,7 @@ main {
     border-radius: 8px;
     border: none;
     color: white;
-    font-size: 11px;
+    font-size: 14px;
     transition: 0.3s;
 }
 
@@ -369,13 +367,12 @@ footer {
     text-align: center;
 }
 
-footer h2 {
-    font-family: "Playfair Display", serif;
+footer p{
+    font-size: 14px;
 }
 
-footer p {
-    font-size: 11px;
-    color: var(--color-text-light);
+footer h2 {
+    font-family: "Playfair Display", serif;
 }
 
 footer .btn {
@@ -426,7 +423,7 @@ footer .red-btn:hover {
 
     .cart input {
         width: 14ch;
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .title {
@@ -545,7 +542,7 @@ footer .red-btn:hover {
     }
 
     .title p {
-        font-size: 11px;
+        font-size: 14px;
         padding-inline: 6vw;
         text-align: center;
     }
@@ -623,22 +620,22 @@ footer .red-btn:hover {
 
     .left-col .page-navigation button {
         padding: 1vh 2.5vw;
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .newsletter input {
         padding: 1.2vh 3vw;
-        font-size: 11px;
+        font-size: 14px;
         width: 100%;
     }
 
     .newsletter button {
-        font-size: 11px;
+        font-size: 14px;
         padding: 1.2vh;
     }
 
     .archives .description {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     .youtube iframe {
@@ -649,7 +646,7 @@ footer .red-btn:hover {
     }
 
     .youtube .vid-title {
-        font-size: 11px;
+        font-size: 14px;
     }
 
     footer {
@@ -659,10 +656,6 @@ footer .red-btn:hover {
 
     footer h2 {
         font-size: 1.4rem;
-    }
-
-    footer p {
-        font-size: 11px;
     }
 
     footer .btn {
@@ -676,7 +669,7 @@ footer .red-btn:hover {
         width: 80%;
         text-align: center;
         padding: 1.5vh 0;
-        font-size: 11px;
+        font-size: 14px;
     }
 }
 
