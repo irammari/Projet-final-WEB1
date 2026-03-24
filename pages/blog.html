@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="../css/cart.css">
+    <title>T. Ramarozaka | Blog</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="../assets/logo.png" alt="Logo"></a>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="../index.html">HOME</a></li>
+                    <li><a href="../pages/blog.html">BLOG</a></li>
+                    <li><a href="../pages/courses.html">COURSES</a></li>
+                    <li><a href="../pages/testimonials.html">TESTIMONIALS</a></li>
+                    <li><a href="../pages/research.html">RESEARCH</a></li>
+                </ul>
+                </ul>
+            </div>
+
+            <div class="cart">
+                <input type="search" placeholder="Search anything...">
+                <button id="cart-icon">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <p>Your cart</p>
+            <button id="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <p class="cart-empty">Your cart is empty.</p>
+        </div>
+    </div>
+
+    <main>
+        <section class="title">
+            <div class="row1">
+                <hr class="red-line">
+                WRITING
+                <hr class="red-line">
+            </div>
+
+            <h1>The <span id="red-word">blog</span></h1>
+
+            <p>Thoughts on teaching, software engineering, languages, and <br> everything in between.</p>
+        </section>
+
+        <section class="main-blog">
+            <aside class="left-col">
+                <article data-index="0">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>Join me at HEI</h3>
+                            <p class="date">March 8, 2026</p>
+                            <p class="description">
+                                Since 2021, I have been a part of HEI - Haute École d'Informatique, from the ground up,
+                                and until its evolution, struggles, and first students, I have been there, and it was a
+                                lot of fun.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>education</p>
+                            <p>HEI</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-index="1">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>Teaching Databases the Right Way</h3>
+                            <p class="date">January 12, 2026</p>
+                            <p class="description">
+                                Too many students jump directly into ORMs without understanding relational thinking. In
+                                my courses, we start with normalization, constraints, and real SQL joins before touching
+                                any abstraction layer. Strong foundations create confident engineers.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>database</p>
+                            <p>SQL</p>
+                            <p>education</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-index="2">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>Why Git Is a Survival Skill</h3>
+                            <p class="date">Febryary 3, 2026</p>
+                            <p class="description">
+                                Version control is not optional. I teach Git before advanced frameworks because
+                                collaboration, clean commit history, and conflict resolution are what make or break
+                                real-world software projects.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>git</p>
+                            <p>software-engineering</p>
+                            <p>education</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-index="3">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>Building a Secure Exam Platform</h3>
+                            <p class="date">March 19, 2026</p>
+                            <p class="description">
+                                Designing a live exam platform with strict tab-focus control and paste restrictions
+                                pushed me to combine pedagogy and engineering. Fair assessment requires both technical
+                                precision and educational clarity.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>svelte</p>
+                            <p>typescript</p>
+                            <p>assessment</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-index="4">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>Operating Systems: From Theory to Practice</h3>
+                            <p class="date">April 8, 2026</p>
+                            <p class="description">
+                                Processes, threads, memory management — these concepts only make sense when students
+                                experiment with them. I prioritize simulations and real concurrency problems to make
+                                operating systems tangible.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>operating-systems</p>
+                            <p>computer-science</p>
+                            <p>education</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-index="5">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>Spring Boot Beyond CRUD</h3>
+                            <p class="date">May 27, 2026</p>
+                            <p class="description">
+                                Teaching Spring Boot is not about generating controllers. It is about architecture:
+                                layered design, validation, security, JPA relationships, and writing backend systems
+                                that remain maintainable years later.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>spring-boot</p>
+                            <p>java</p>
+                            <p>backend</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-index="6">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>Technical English Is a Career Lever</h3>
+                            <p class="date">July 14, 2026</p>
+                            <p class="description">
+                                Reading documentation, writing clear README files, and communicating ideas
+                                internationally are critical skills for developers. Integrating technical English into
+                                IT training unlocks global opportunities.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>english</p>
+                            <p>career</p>
+                            <p>education</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-index="7">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>SEO for Engineers</h3>
+                            <p class="date">September 2, 2026</p>
+                            <p class="description">
+                                SEO is not just marketing. It is structured HTML, accessibility, performance
+                                optimization, and semantic clarity. Developers who understand search engines build
+                                better web applications.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>seo</p>
+                            <p>web-development</p>
+                            <p>performance</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article data-index="8">
+                    <div class="image">
+                        <img src="" alt="">
+                    </div>
+
+                    <div class="text-container">
+                        <div class="top-text">
+                            <h3>Narrative-Driven Programming Exercises</h3>
+                            <p class="date">November 18, 2026</p>
+                            <p class="description">
+                                I design algorithm problems with storytelling elements while keeping strict technical
+                                constraints. Students engage more deeply, and still practice loops, accumulators, edge
+                                cases, and structured thinking.
+                            </p>
+                        </div>
+
+                        <div class="tags">
+                            <p>algorithms</p>
+                            <p>pedagogy</p>
+                            <p>education</p>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="page-navigation">
+                    <button class="slider">← Prev</button>
+                    <button class="nb-page">1</button>
+                    <button class="nb-page">2</button>
+                    <button class="slider">Next →</button>
+                </div>
+            </aside>
+
+            <aside class="right-col">
+                <div class="archives">
+                    <div class="heading">
+                        <hr class="red-line">
+                        ARCHIVES
+                    </div>
+
+                    <p class="description">
+                        <span>January 2026</span>
+                        <span>2</span>
+                    </p>
+
+                    <p class="description">
+                        <span>February 2026</span>
+                        <span>1</span>
+                    </p>
+                </div>
+
+                <div class="newsletter">
+                    <div class="heading">
+                        <hr class="red-line">
+                        NEWSLETTER
+                    </div>
+
+                    <p class="description">Get new articles straight to your inbox. No spam ever.</p>
+
+                    <input type="email" placeholder="your@email.com">
+                    <button>SUBSCRIBE</button>
+                </div>
+
+                <div class="youtube">
+                    <div class="heading">
+                        <hr class="red-line">
+                        ON YOUTUBE
+                    </div>
+
+                    <p class="description">Latest videos from the channel.</p>
+
+                    <div class="vid-container">
+                        <iframe src="https://youtube.com/embed/cdWNlGD_FzQ" frameborder="0"></iframe>
+                        <p class="vid-title">Counter App with Pharo</p>
+                    </div>
+
+                    <div class="vid-container">
+                        <iframe src="https://youtube.com/embed/cfS4XP4bBEk" frameborder="0"></iframe>
+                        <p class="vid-title">Build a DSL with Pharo</p>
+                    </div>
+
+                    <div class="vid-container">
+                        <iframe src="https://youtube.com/embed/Ut2aeuFc2KY" frameborder="0"></iframe>
+                        <p class="vid-title">My keyboard addiction</p>
+                    </div>
+
+                    <a href="https://www.youtube.com/@tokimaheryramarozaka2116" target="_blank">VIEW ALL VIDEOS →</a>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <footer>
+        <h2>Want to go deeper?</h2>
+        <p>Explore the courses or get in touch for a consultation.</p>
+
+        <div class="btn">
+            <a href="courses.html" class="white-btn">BROWSE COURSES</a>
+            <a href="contact.html" class="red-btn">COLLABORATE</a>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+
+</html>
