@@ -22,11 +22,12 @@
     <title>T. Ramarozaka | Research</title>
 </head>
 
+
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href=""><img src="assets/logo.png" alt="Logo"></a>
+                <a href="index.html"><img src="assets/logo.png" alt="Logo"></a>
             </div>
 
             <div class="nav-links">
@@ -48,6 +49,19 @@
             </div>
         </nav>
     </header>
+
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-drawer-header">
+            <p>My Cart</p>
+            <button id="cart-close">✕</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer" id="cart-footer">
+            <hr>
+            <p>Total: <span id="cart-total-price">0 Ar</span></p>
+            <button id="confirm-order-btn" class="order-btn">CONFIRM YOUR ORDER</button>
+        </div>
+    </div>
     
     <div class="cart-drawer" id="cart-drawer">
         <div class="cart-drawer-header">

@@ -117,17 +117,17 @@ main {
     flex-direction: column;
     align-items: center;
     height: 30vh;
-    gap: 1.5rem;
+    gap: 1rem;
     margin: 4rem 0;
+    margin-top: 16vh;
 }
 
 .courses-header .small-header::after {
     content: "";
     display: inline-block;
-    width: 2vw;
-    height: 0.2vh;
+    width: 30px;
+    height: 2px;
     background-color: var(--color-red);
-    margin-left: 0.5rem;
     vertical-align: middle;
 }
 
@@ -137,13 +137,12 @@ main {
 }
 
 .small-header{
-    font-size: 0.7rem;
     letter-spacing: 1px;
     color: var(--color-text-light);
 }
 
 .courses-header h1 {
-    font-size: 32px;
+    font-size: 4ch;;
     font-family: "playfair display", serif;
     color: var(--color-text-dark);
 }
@@ -154,7 +153,7 @@ main {
 }
 
 .courses-header-text {
-    color: var(--color-text-light);
+    color: var(--color-text-muted);
     text-align: center;
     max-width: 500px;
 }
@@ -398,7 +397,6 @@ main {
     color: white;
     border-top-left-radius: 4px;
     padding: 4px 8px;
-    font-size: 0.7rem;
 }
 
 .level-beginner {
@@ -429,9 +427,14 @@ main {
     font-size: 0.85rem;
     color: #666;
     overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+
+    display: block;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    line-clamp: 2; 
+    -webkit-line-clamp: 2;
     transition: max-height 0.3s ease;
 }
 
@@ -448,7 +451,6 @@ main {
     border-radius: 4px;
     cursor: pointer;
     font-family: "DM Sans", sans-serif;
-    font-size: 0.85rem;
     transition: all 0.2s ease;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.13);
 }
@@ -495,16 +497,11 @@ main {
     margin-top: 0.5rem;
 }
 
-.course-description {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  transition: max-height 0.3s ease;
-}
 
 .course-description.expanded {
-  -webkit-line-clamp: unset;
+    display: block;
+    -webkit-box-orient: unset;
+    overflow: visible;
 }
 
 footer {
@@ -530,14 +527,15 @@ footer .btn {
 
 footer a {
     font-size: 10px;
-    font-weight: bolder;
-    padding: 1.5vh 1.5vw;
+    padding: 1.5vh 3vh;
     border-radius: 20px;
     text-decoration: none;
 }
 
+
 footer p{
     font-size: 14px;
+    color: var(--color-text-light);
 }
 
 footer .red-btn {
@@ -551,7 +549,6 @@ footer .red-btn:hover {
     background-color: white;
     color: var(--color-red);
 }
-
 @media screen and (max-width: 412px) {
 
     header {
@@ -605,30 +602,33 @@ footer .red-btn:hover {
 
     .courses-header {
         height: auto;
-        margin: 6rem 1rem 2rem 1rem;
-        gap: 1rem;
-    }
-
-    .courses-header h1 {
-        font-size: 24px;
+        margin: 6rem 3% 2rem 3%;
+        gap: 0.8rem;
         text-align: center;
     }
 
+    .courses-header h1 {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
     .courses-header-text {
-        max-width: 90%;
-        font-size: 0.85rem;
+        max-width: 100%;
+        font-size: 12px;
     }
 
     .courses-count {
-        margin: 0 0 20px 15px;
+        margin: 0 0 15px 3%;
         font-size: 0.7rem;
     }
 
     .courses-filters {
         flex-direction: column;
-        height: auto;
-        margin: 0 1rem;
-        padding: 2rem 1rem;
+        width: 100%;
+        min-width: unset;
+        max-width: unset;
+        padding: 1rem 3%;
+        margin: 0 0;
         gap: 1rem;
     }
 
@@ -645,20 +645,22 @@ footer .red-btn:hover {
         font-size: 10px;
     }
 
-    .search-filter input, 
+    .search-filter input,
     .courses-filters select {
         width: 100%;
-        font-size: 0.85rem;
+        font-size: 12px;
     }
 
     .clear-filter-btn button {
         font-size: 0.7rem;
-        padding: 1rem 0.5rem;
+        padding: 0.8rem 0.5rem;
     }
 
+    /* Courses gallery */
     .courses-gallery {
         grid-template-columns: 1fr;
-        margin: 0 1rem;
+        margin: 0 3%;
+        gap: 1rem;
     }
 
     .course-card {
@@ -673,17 +675,6 @@ footer .red-btn:hover {
         padding: 10px;
     }
 
-    .course-description {
-        -webkit-line-clamp: 3;  
-        overflow: hidden;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-    }
-
-    .course-description.expanded {
-        -webkit-line-clamp: unset;
-    }
-
     .course-card-btns {
         flex-direction: column;
         gap: 5px;
@@ -696,7 +687,14 @@ footer .red-btn:hover {
     }
 
     footer {
-        padding: 4vh 2vw;
+        padding: 4vh 3%;
+        gap: 1.5vh;
+        text-align: center;
+    }
+
+    footer .btn {
+        flex-direction: column;
+        gap: 1vh;
     }
 
     footer p {
@@ -704,7 +702,9 @@ footer .red-btn:hover {
     }
 
     footer a {
+        width: 95%;
         font-size: 10px;
         padding: 1vh 1vw;
     }
+
 }

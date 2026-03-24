@@ -22,7 +22,9 @@
     background-color: var(--color-bg-warm);
     font-family: "DM Sans", sans-serif;
     scroll-behavior: smooth;
+    font-size: 14px;
 }
+
 
 header {
     background-color: var(--color-red-dark);
@@ -133,7 +135,7 @@ main {
 
 .red-line {
     width: 2vw;
-    height: 1.5px;
+    height: 2px;
     background-color: var(--color-red);
     border: none;
 }
@@ -367,8 +369,10 @@ footer {
     text-align: center;
 }
 
+
 footer p{
     font-size: 14px;
+    color: var(--color-text-light);
 }
 
 footer h2 {

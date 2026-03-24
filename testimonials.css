@@ -1,30 +1,30 @@
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box
 }
 
 :root {
-    scroll-behavior: smooth;
+    --color-red:          #b91c1c;
+    --color-red-dark:     #991b1b;
+    --color-red-hover:    #7f1d1d;
 
-    --color-red: #b91c1c;
-    --color-red-dark: #991b1b;
-    --color-red-hover: #7f1d1d;
+    --color-bg-warm:      #f9f6f1;
+    --color-bg-white:     #ffffff;
 
-    --color-bg-warm: #f9f6f1;
-    --color-bg-white: #ffffff;
+    --color-text-dark:    #1a1a1a;
+    --color-text-muted:   #78716c;
+    --color-text-light:   #a8a29e;
 
-    --color-text-dark: #1a1a1a;
-    --color-text-muted: #78716c;
-    --color-text-light: #a8a29e;
-
-    --color-border: #e5e0d8;
+    --color-border:       #e5e0d8;
     --color-border-light: #f0ece4;
 
-    background-color: var(--color-bg-white);
+    background-color: var(--color-bg-warm);
     font-family: "DM Sans", sans-serif;
-
+    scroll-behavior: smooth;
+    font-size: 14px;
 }
+
 
 header {
     background-color: var(--color-red-dark);
@@ -55,18 +55,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2vw;
+    gap: 2.2vw;
 }
 
 .nav-links ul a {
     position: relative;
     text-decoration: none;
     color: white;
-    font-size: 11px;
+    font-size: 12px;
     padding-block: 0.5vh;
 }
 
-nav ul li a::after {
+.nav-links ul li a::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -79,7 +79,7 @@ nav ul li a::after {
     transition: transform 0.3s ease;
 }
 
-nav ul li a:hover::after {
+.nav-links ul li a:hover::after {
     transform: scaleX(1);
 }
 
@@ -104,7 +104,6 @@ nav ul li a:hover::after {
     background-color: transparent;
     border: none;
 }
-
 
 .cart i {
     color: white;
@@ -131,13 +130,12 @@ main {
     justify-content: center;
     align-items: center;
     gap: 0.5vw;
-    font-size: 11px;
     color: var(--color-text-light);
 }
 
 .red-line {
     width: 2vw;
-    height: 0.2vh;
+    height: 2px;
     background-color: var(--color-red);
     border: none;
 }
@@ -153,7 +151,6 @@ main {
 }
 
 .title p {
-    font-size: 11px;
     color: var(--color-text-muted);
     text-align: center;
 }
@@ -162,7 +159,6 @@ main {
     display: flex;
     align-items: center;
     gap: 0.5vw;
-    font-size: 11px;
     color: var(--color-text-light);
     margin-bottom: 5px;
 }
@@ -227,7 +223,6 @@ main {
 }
 
 .reviews-container .profile .details .author {
-    font-size: 11px;
     font-weight: bolder;
 }
 
@@ -237,7 +232,6 @@ main {
 }
 
 .reviews-container .description {
-    font-size: 11px;
     color: var(--color-text-muted);
 }
 
@@ -316,7 +310,7 @@ footer h2 {
 }
 
 footer p {
-    font-size: 11px;
+    font-size: 14px;
     color: var(--color-text-light);
 }
 
@@ -332,6 +326,13 @@ footer a {
     padding: 1.5vh 1.5vw;
     border-radius: 20px;
     text-decoration: none;
+}
+
+footer button {
+    font-size: 10px;
+    font-weight: bolder;
+    padding: 1.5vh 1.5vw;
+    border-radius: 20px;
 }
 
 footer .white-btn {
@@ -356,7 +357,6 @@ footer .red-btn:hover {
     background-color: white;
     color: var(--color-red);
 }
-
 
 @media (max-width: 1024px) {
 
@@ -411,7 +411,6 @@ footer .red-btn:hover {
 
 
 @media (max-width: 600px) {
-
     header {
         padding: 1.2vh 4vw;
     }
@@ -572,10 +571,55 @@ footer .red-btn:hover {
 
 
 @media (max-width: 380px) {
+    header {
+        padding: 1.2vh 4vw;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        gap: 1.2vh;
+        justify-content: space-between;
+    }
 
     .navbar .logo {
-        width: 34vw;
+        width: 28vw;
+        order: 1;
     }
+
+    .cart {
+        order: 2;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+    }
+
+    .cart input {
+        display: none;
+    }
+
+    .nav-links ul {
+        gap: 4vw;
+        overflow-x: auto;
+        padding-bottom: 2px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .nav-links ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-links ul a {
+        font-size: 10px;
+        white-space: nowrap;
+    }
+
+    .cart i {
+        font-size: 2ch;
+    }
+
 
     .title h1 {
         font-size: 2.2ch;

@@ -26,7 +26,7 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href=""><img src="assets/logo.png" alt="Logo"></a>
+                <a href="index.html"><img src="assets/logo.png" alt="Logo"></a>
             </div>
 
             <div class="nav-links">
@@ -49,13 +49,16 @@
         </nav>
     </header>
 
-    <div class="cart-drawer" id="cart-drawer">
+    <div id="cart-drawer" class="cart-drawer">
         <div class="cart-drawer-header">
-            <p>Your cart</p>
+            <p>My Cart</p>
             <button id="cart-close">✕</button>
         </div>
-        <div class="cart-items" id="cart-items">
-            <p class="cart-empty">Your cart is empty.</p>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer" id="cart-footer">
+            <hr>
+            <p>Total: <span id="cart-total-price">0 Ar</span></p>
+            <button id="confirm-order-btn" class="order-btn">CONFIRM YOUR ORDER</button>
         </div>
     </div>
 
@@ -458,7 +461,7 @@
 
     <footer>
         <h2>Join them</h2>
-        <p>Wether you want to learn, collaborate, or get something build —
+        <p>Whether you want to learn, collaborate, or get something build —
             <br> Tokimahery is ready to help you forward.
         </p>
 

@@ -25,6 +25,7 @@
     font-size: 14px;
 }
 
+
 header {
     background-color: var(--color-red-dark);
     width: 100%;
@@ -131,7 +132,7 @@ main {
 .hero-header-small {
     letter-spacing: 1px;
     font-family: "DM Sans", sans-serif;
-    color: var(--color-text-light);
+    color: var(--color-red);
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -300,6 +301,7 @@ main {
 }
 
 .about-me-title {
+    font-size: 4ch;
     font-family: 'playfair display', serif;
     font-weight: 600;  
     gap: 0.5rem;
@@ -544,7 +546,6 @@ footer {
 
 footer h2 {
     font-family: "Playfair Display", serif;
-    font-size: 28px;
 }
 
 footer .btn {
@@ -555,14 +556,15 @@ footer .btn {
 
 footer a {
     font-size: 10px;
-    font-weight: bolder;
-    padding: 1.5vh 1.5vw;
+    padding: 1.5vh 3vh;
+    font-style: bolder;
     border-radius: 20px;
     text-decoration: none;
 }
 
 footer p{
     font-size: 14px;
+    color: var(--color-text-light);
 }
 
 footer .red-btn {
